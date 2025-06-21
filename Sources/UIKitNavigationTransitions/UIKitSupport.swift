@@ -223,7 +223,6 @@ extension UINavigationController {
 	private func exclusivelyEnableGestureRecognizer(_ gestureRecognizer: UIPanGestureRecognizer?) {
 		for recognizer in [
 			defaultEdgePanRecognizer!, defaultPanRecognizer!, edgePanRecognizer!, panRecognizer!,
-			edgePanVerticalRecognizer!, panVerticalRecognizer!,
 		] {
 			if let gestureRecognizer, recognizer === gestureRecognizer {
 				recognizer.isEnabled = true
@@ -304,16 +303,6 @@ extension UINavigationController {
 	}
 
 	var panRecognizer: UIPanGestureRecognizer! {
-		get { self[] }
-		set { self[] = newValue }
-	}
-
-	var edgePanVerticalRecognizer: UIScreenEdgePanGestureRecognizer! {
-		get { self[] }
-		set { self[] = newValue }
-	}
-
-	var panVerticalRecognizer: UIPanGestureRecognizer! {
 		get { self[] }
 		set { self[] = newValue }
 	}
